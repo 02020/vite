@@ -1,10 +1,8 @@
-// import vue from '@vitejs/plugin-vue'
-
 const { resolve } = require('path')
 const vue = require('@vitejs/plugin-vue')
 
 module.exports = {
-  //to-docs
+  // to-docs
   alias: [
     {
       find: '/src',
@@ -12,18 +10,14 @@ module.exports = {
     }
   ],
   // root: resolve(__dirname, 'playground'),
-  plugins: [
-    vue() // for vue plugin
-  ],
-  base: '/er/', // for base url
+  plugins: [vue()],
+  base: '/er/',
   build: {
-    outDir: 'dist/er' // npm run serve-build => http://localhost:3000/er/
+    outDir: 'dist/er'
   },
-  server: {
-    port: 1122 // for dev mode
-  },
+  server: { port: 1122 },
 
   vueCompilerOptions: {
-    isCustomElement: tag => /^x-/.test(tag)
+    isCustomElement: (tag) => /^x-/.test(tag)
   }
 }

@@ -72,7 +72,47 @@ Vue.filter('filterC', (value, name) => {
 
 [解读 vue-class-component 源码实现原理](https://juejin.im/post/5ea1a96c51882573672232a7)
 
+1. [设计导航](http://hao.shejidaren.com/#nogo)
+1. [前端大全](https://github.com/windiest/Front-end-tutorial)
+1. [前端工具大全](https://github.com/nieweidong/fetool)
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. [JavaScript忍者秘籍——闭包](http://www.cnblogs.com/koto/p/5797251.html)
+1. [知乎上有哪些在前端开发领域的高质量回答？](https://www.zhihu.com/question/20246142)
+1. [Mac 设置指南](https://github.com/macdao/ocds-guide-to-setting-up-mac)
+1. [书写具备一致风格、通俗易懂 JavaScript 的原则](https://github.com/rwaldron/idiomatic.js/tree/master/translations/zh_CN)
+1. [入门微信小程序开发](https://www.zhihu.com/question/50907897)
 
+
+## soft
+1 [capslock+](http://cjkis.me/capslock+/#功能说明)
+1. [VSCode 插件](http://www.open-open.com/lib/view/1487752358536)
+
+
+1. [tool](https://jsfiddle.net/)
+
+1. [JavaScript libraries, frameworks, and plugins.](http://www.javascripting.com/)
+
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+1. []()
+
+## CDN
+1. [BootCDN](http://www.bootcdn.cn/)
 
 #### 其他
 [vuejs/jsx](https://github.com/vuejs/jsx#installation)

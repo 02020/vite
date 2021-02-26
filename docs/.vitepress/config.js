@@ -45,8 +45,7 @@ module.exports = {
       ['KIT', '/kit/'],
       ['指南', '/guide/'],
       ['库', '/shared/'],
-      ['Vue-相关', '/Vue/'],
-      ['fext', '/fext/'],
+      ['vite', '/Vue/'],
       ['第三方', '/third/'],
       ['掘金', 'https://e.juejin.cn/'],
       ['stars', 'https://github.com/02020?tab=stars'],
@@ -62,7 +61,7 @@ module.exports = {
         ['综合应用']
       ]),
       '/Vue/': toGroup('/Vue/')([['完整', 'spin']]),
-      '/third/': toChild('/Third/')([
+      '/third/': toChild('/third/')([
         //
         ['R'],
         ['Jquery'],
@@ -90,8 +89,9 @@ module.exports = {
         ['lib', 'validate']
       ]),
       '/test/': toGroup('/test/')([
-        ['测试1', '1'],
-        ['测试2', '2']
+        ['首页', 'index'],
+        ['测试', '1'],
+        ['测试', '2'],
       ]),
     }
   }

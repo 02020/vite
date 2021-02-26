@@ -1,6 +1,6 @@
 import DemoBlock from '../components/demo/block.vue'
 import Demo from '../components/demo/index.vue'
-import VJS from '../test/js.vue'
+import VJS from '../../test/js.vue'
 
 // src 中的组件
 import {

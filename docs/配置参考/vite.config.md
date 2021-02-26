@@ -1,3 +1,4 @@
+```ts
 import vue from '@vitejs/plugin-vue'
 import resolve from 'path'
 
@@ -21,3 +22,5 @@ export default {
     port: 1122 // for dev mode
   }
 }
+
+```

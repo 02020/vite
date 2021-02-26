@@ -16,6 +16,7 @@
 <script>
 import { reactive } from 'vue'
 // 修改了 .js 文件后需要手动刷新一下
+// 全局注册: kit
 
 /** 标准格式   */
 const test = () => {

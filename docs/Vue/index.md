@@ -1,4 +1,14 @@
+---
+sidebar: false
+---
+# 2020
 
+1. [**vite**](https://cn.vitejs.dev/)
+1. [**vitepress**](https://vitepress.vuejs.org/guide/configuration.html)
+
+
+
+# 历史
 ## vue
 1. [官网](https://cn.vuejs.org/v2/guide/)
 1. [走进Vue.js](http://www.jianshu.com/p/78c9e5342990)
@@ -36,11 +46,6 @@
 1. [辅助函数](http://www.imooc.com/article/14741)
 1. [Vuex源码阅读笔记](http://blog.csdn.net/qq_24122593/article/details/53740672)
 1. [Vuex 构建一个笔记应用](http://www.tuicool.com/articles/qUzMN3Y)
-
-
-## axjos
-1. []()
-
 
 ## 实例
 1. [Vue + ElementUI 后台管理系统](https://juejin.im/post/58d51155b123db337066b3d7)
