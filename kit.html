@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue UI Components</title>
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but VUI doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+
+    <script type="module">
+      import kit from './src/kit/index.js'
+      const toChild = (path='') =>
+        kit.fR((item, i, acc, o) => {
+          const keys = kit.repeat(item)
+          return { text: keys[0], link: path + keys[1] }
+        }, [])
+
+      const toChildren = (path) => (key, item, index, acc) => {
+     
+        return {
+          text: key,
+          children: toChild(path)(item.map(x=> x[1]))
+        }
+      }
+
+      const toGroup = (path) => (list) => {
+        let temp = kit.toGroup(0)(list)
+        return kit.fR(toChildren(path), [])(temp)
+      }
+
+      let resp = toGroup('/shared/')([
+        ['js', 'Array'],
+        ['js', 'dom'],
+        ['js', 'es6'],
+        ['third', 'Jquery'],
+        ['js', 'localStorage'],
+        ['js', 'Map'],
+        ['js', 'Object'],
+        ['lib', 'onion'],
+        ['third', 'R'],
+        ['js', 'String'],
+        ['lib', 'Utils'],
+        ['third', 'vue']
+      ])
+ 
+        console.log(resp)
+    </script>
+  </body>
+</html>

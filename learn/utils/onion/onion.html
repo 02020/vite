@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onion</title>
+  </head>
+  <body>
+    <div id="app">{{html}}</div>
+  </body>
+
+  <script type="module">
+    import Vue from 'http://g.com/lib/vue.js';
+    import { MapBox } from './onion.js';
+    import test from './onion-test-01.js';
+    new Vue({
+      data() {
+        return {
+          html: test(MapBox),
+        };
+      },
+    }).$mount('#app');
+  </script>
+</html>

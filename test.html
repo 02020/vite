@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script type="module">
+      const fn = (args) => {
+        console.log(args)
+      }
+
+      const list = [
+        { id: 1, name: '1' },
+        { id: 1, name: '1' },
+        { id: 2, name: '2' },
+        { id: 2, name: '2' }
+      ]
+
+      const remove = (arr, func, cb) =>
+        Array.isArray(arr)
+          ? arr.filter(func).reduce((acc, val, index) => {
+              Reflect.apply(cb, null, [val, arr, index])
+              arr.splice(arr.indexOf(val), 1)
+              return acc.concat(val)
+            }, [])
+          : []
+      const resp = []
+      remove(
+        list,
+        (x) => x.id == 1,
+        (val) => {
+          resp.push(val)
+        }
+      )
+      console.log(list, resp);
+    </script>
+  </body>
+</html>

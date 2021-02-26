@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue UI Components</title>
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but VUI doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app">空的</div>
+
+    <input id="input" />
+    <script type="module">
+      import Vue from './test/Property.Vue.js'
+
+      let demo = new Vue({
+        data: {
+          text: ''
+        }
+      })
+
+      const p = document.getElementById('app')
+      const input = document.getElementById('input')
+
+      input.addEventListener('keyup', function (e) {
+        demo.text = e.target.value
+      })
+
+      demo.$watch('text', (str) => (p.innerHTML = str))
+    </script>
+  </body>
+</html>

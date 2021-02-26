@@ -1,0 +1,46 @@
+{
+  "name": "er2",
+  "version": "0.0.1",
+  "description": "Web UI components based on Vue 3 and Vite",
+  "files": [
+    "dist/style.css",
+    "dist/vui-vc-next.es.js",
+    "src"
+  ],
+  "main": "src/components/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluepower/vui-vc-next.git"
+  },
+  "keywords": [],
+  "author": "02020",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "docs": "vitepress dev docs --port 2323",
+    "npx-docs": "cd docs && npx vitepress",
+    "build": "vite build --config build/vite.config.js",
+    "build-demo": "vite build",
+    "build-docs": "cd docs && npx vitepress build",
+    "serve-build": "vite build && cd ./dist && vite"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.32.8",
+    "vite": "^2.0.1",
+    "vitepress": "^0.12.2",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "iOS >= 8",
+    "Android > 4.0"
+  ]
+}

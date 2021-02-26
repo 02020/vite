@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf ./dist ./playground/dist ./docs/dist ./docs/.vitepress/dist ./temp",
+    "build": "cross-env node ./scripts/build.js",
+    "dev": "vite -c vite.config.js",
+    "docs:dev": "cross-env node ./scripts/docs.js",
+    "docs:build": "cross-env NODE_ENV=production node ./scripts/docs.js"
+  },
+}

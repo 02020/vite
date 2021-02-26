@@ -1,0 +1,30 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": false,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": false,
+    "lib": ["es2017", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitHelpers": false,
+    "noEmitOnError": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "pretty": true,
+    "removeComments": true,
+    "rootDir": "./",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "isolatedModules": true
+  },
+  "exclude": ["./node_modules"]
+}
