@@ -70,6 +70,7 @@ export default {
     })
     const onClick = () => {
       const log = test()
+      debugger
       state.params = log.params
       state.resp = log.resp
       console.log(props.js);
