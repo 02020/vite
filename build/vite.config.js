@@ -1,17 +1,14 @@
-import vue from '@vitejs/plugin-vue'
-
 const path = require('path')
 
 export default {
-  plugins: [
-    vue() // for vue plugin
-  ],
+  plugins: [],
   build: {
+    target: 'es2015',
     outDir: './docs/dist',
-    minify: 'esbuild',
+    minify: 'false',
     lib: {
-      entry: path.resolve(__dirname, '../src/kit/index.js'),
       name: 'kit',
+      entry: path.resolve(__dirname, '../src/kit/index.js'),
       formats: ['es']
     }
   }

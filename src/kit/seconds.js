@@ -1,6 +1,13 @@
 /**　lambda - start
 ________________________________________________________________________________
 */
+/**
+ * compact - 过滤掉数组中所有假值元素
+ * @param {*} arr
+ * @returns
+ */
+export const compact = arr => arr.filter(Boolean);
+
 
 /**
  * compose - 函数式编程术语：函数组合
@@ -204,8 +211,8 @@ export const sumBy = (arr, fn) =>
 
 /**
    * select - 选择对象中的属性值
-   * @param {*} from 
-   * @param  {...any} selectors 
+   * @param {*} from
+   * @param  {...any} selectors
    * @example const obj = { selector: { to: { val: 'val to select' } } };
               select(obj, 'selector.to.val'); // ['val to select']
               select(obj, 'selector.to.val', 'selector.to'); // ['val to select', { val: 'val to select' }]
@@ -228,8 +235,8 @@ export const zip = (...arrays) => {
 }
 /**
    * zipObject - 创建一个属性关联到值的对象
-   * @param {*} props 
-   * @param {*} values 
+   * @param {*} props
+   * @param {*} values
    * @example
    * zipObject(['a', 'b', 'c'], [1, 2]); // {a: 1, b: 2, c: undefined}
      zipObject(['a', 'b'], [1, 2, 3]); // {a: 1, b: 2}

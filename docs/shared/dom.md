@@ -1,6 +1,22 @@
 1. [HTML DOM Element 对象](http://www.w3school.com.cn/jsref/dom_obj_all.asp)
 
 
+```ts
+//找到 div1
+var div1 = document.getElementById("div1");
+//创建 一个 p标签
+var p = document.createElement('p');
+//创建一个文本节点
+var p1txt = document.createTextNode('p1');
+p.appendChild(p1txt);
+//添加节点
+div1.appendChild(p);
+//删除节点div2
+var div2 = document.getElementById('div2');
+//自己把自己干掉
+div2.parentNode.removeChild(div2);
+```
+
 
 
 ### 动态添加css

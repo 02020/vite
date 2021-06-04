@@ -64,9 +64,21 @@ const _ = {
 const toPairs = kit.fR((item) => [item[0], item[1]])
 const toPairs1 = kit.fR((item) => [item[1], item[0]])
 
-
 initialValue[index]
-? initialValue[index].push(node)
-: (initialValue[index] = [node]);
+  ? initialValue[index].push(node)
+  : (initialValue[index] = [node])
+```
 
+```ts
+const val = _.schema.reduce((acc: any, cur: any) => {
+  // 1212 增加空值判断
+  console.log(cur.name)
+  acc[cur.name] = _.value[cur.name] || cur.value
+  return acc
+}, {})
+
+const val = kit.fR((item: any) => [
+  item.name,
+  _.value[item.name] || item.value
+])(_.schema)
 ```

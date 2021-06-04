@@ -1,18 +1,15 @@
 ```ts
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  setup (
-    props: object,
-    { attrs, emit } 
-  ) {
+  setup(props: object, { attrs, emit }) {
     return { attrs, emit }
   },
-  render (props: { attrs: { name: string }; emit: Function }) {
+  render(props: { attrs: { name: string }; emit: Function }) {
     return (
       <div
         onClick={() => {
-          console.log("object");
+          console.log('object')
           props.emit('updateName')
         }}
       >
@@ -21,4 +18,16 @@ export default defineComponent({
     )
   }
 })
+```
+
+```ts
+watch(sidebar, (curr, prev) => {
+  console.log('sidebar', curr, prev)
+})
+```
+
+
+
+```ts
+
 ```

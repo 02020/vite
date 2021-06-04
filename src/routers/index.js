@@ -4,7 +4,7 @@ import { getRoute } from './routerUtil'
 
 import Home from '../views/IndexDemo.vue'
 import Demo from '../demo/main.vue'
-import JS from '../demo/js.vue'
+
 
 const routes = [
   {
@@ -20,7 +20,7 @@ const routes = [
   {
     path: '/js',
     name: 'js',
-    components: { default: JS }
+    // components: { default: JS }
   }
 ]
 

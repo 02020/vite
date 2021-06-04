@@ -1,5 +1,5 @@
 import { fromPairs, pairs } from './seconds.js'
-import { fR, fRa } from './kit.js'
+import { fR, fRa, repeat, fMap } from './kit.js'
 
 /**
  * 应用-分组
@@ -31,11 +31,27 @@ const toFormItems = (config, filters = []) => {
   const fn = (info) => (item, i, acc, o) => {
     const __item = Array.isArray(item) ? pairs(__pairs, item) : { ...item }
     const { value, name } = __item
-    const filter = __filters[name]
+    const filter = __filters[name] || __item[3]
     __item.value = !!filter ? filter(value, info, name) : info[name] || value
     return __item
   }
   return (info) => fR(fn(info), [])(config)
 }
 
-export { toGroup, toFormItems }
+// 赋值
+const toFormValues = (config) => fMap((x) => toFormItems(config)(x))
+
+const aipToC = (http) => (item) => {
+  const [op, _key, url] = item
+  let key = repeat(_key)
+  const fn = (params = {}) => {
+    if (typeof params === 'string') {
+      return http[op](url + key[0] + '/' + params)
+    } else {
+      return http[op](url + key[0], params)
+    }
+  }
+  return [key[1], fn]
+}
+
+export { toGroup, toFormItems, toFormValues, aipToC }

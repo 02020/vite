@@ -46,10 +46,12 @@ module.exports = {
       ['指南', '/guide/'],
       ['库', '/shared/'],
       ['vite', '/Vue/'],
+      ['组件', '/schema/'],
       ['第三方', '/third/'],
       ['掘金', 'https://e.juejin.cn/'],
       ['stars', 'https://github.com/02020?tab=stars'],
       ['test', '/test/'],
+      ['java', '/java/'],
     ]),
     sidebar: {
       '/kit/': toChild('/kit/')([
@@ -58,7 +60,8 @@ module.exports = {
         ['fRa'],
         ['formItemC'],
         ['toGroup'],
-        ['综合应用']
+        ['综合应用'],
+        ['reduce']
       ]),
       '/Vue/': toGroup('/Vue/')([['完整', 'spin']]),
       '/third/': toChild('/third/')([
@@ -86,7 +89,37 @@ module.exports = {
         ['lib', 'Utils'],
         ['lib', 'axios'],
         ['lib', 'MapBox'],
-        ['lib', 'validate']
+        ['lib', 'validate'],
+        ['基础', 'date'],
+      ]),
+      '/test/': toGroup('/test/')([
+        ['首页', 'index'],
+        ['测试', '1'],
+        ['测试', '2'],
+      ]),
+      '/java/': toGroup('/Java/')([
+        ['首页', 'index'],
+        ['AOP', 'aop'],
+      ]),
+      '/functional/': toGroup('/functional /')([
+        ['首页', 'ch1'],
+        ['测试', 'ch2'],
+        ['测试', 'ch3'],
+        ['测试', 'ch4'],
+        ['测试', 'ch5'],
+        ['测试', 'ch6'],
+        ['测试', 'ch7'],
+        ['测试', 'ch8'],
+        ['测试', 'ch9'],
+        ['测试', 'ch10'],
+        ['应用', 'ch11'],
+      ]),
+      '/schema/': toGroup('/schema/')([
+        ['组件', 'components'],
+        ['组件', 'table'],
+        ['组件', 'form'],
+        ['组件', 'tree'],
+        ['应用', 'demo'],
       ]),
       '/test/': toGroup('/test/')([
         ['首页', 'index'],

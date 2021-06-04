@@ -41,6 +41,9 @@ export const tap = (...args) => {
  */
 export const o = (f) => (g) => (x) => f(g(x))
 
+/**
+ * 返回数组
+ */
 export const of = (x, flag = true) => (flag ? [x] : x)
 
 /**
@@ -109,6 +112,14 @@ export const fR = (f, initial = {}) => (o) =>
 export const keysTo = (keys) => fMap(keysC(keys))
 
 /**
+ * 同 keysTo 功能, 如果是对象直接返回
+ * @param {*} keys
+ * @returns
+ */
+export const toObjectArray = (keys, f = fr) =>
+  fMap((item) => (Array.isArray(item) ? f(keysC(keys)(item)) : f(item)))
+
+/**
  * 执行map
  * @param {*} f
  * @param {*} cb
@@ -135,7 +146,7 @@ export const mergeArray = (source, target) =>
 
 export const repeat = (arr, len = 2) => {
   let resp = []
-  if (Array.isArray(arr) && arr.length === len) {
+  if (Array.isArray(arr) && arr.length >= len) {
     resp = arr
   } else {
     const init = Array.isArray(arr) && arr.length === 1 ? arr[0] : arr

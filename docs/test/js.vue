@@ -15,39 +15,73 @@
 
 <script>
 import { reactive } from 'vue'
+
 // 修改了 .js 文件后需要手动刷新一下
 // 全局注册: kit
 
+const resp = []
 /** 标准格式   */
 const test = () => {
   /** 数据   */
-  const config = [
-    // label, key, value
-    ['名称', 'A'],
-    ['地址', 'B'],
-    ['联系人', 'C'],
-    ['联系方式', 'D'],
-    ['姓名', 'EE']
-  ]
-  // 以info的key为准
-  const info = { A: '_A_', B: '_B_', C: '_C_', D: '_D_' + +new Date() }
+  const { fR } = kit
 
-  /** 方法 */
-  const toInfo = (config) => {
-    const info = kit.fR((item) => [item[1], item[0]])(config)
 
-    return kit.fR((key, value) => ({ label: info[key], key, value }), [])
+
+  const pairs1 = {
+    key1: 'a1',
+    value1: '1'
   }
 
-  /** 结果 */
-  const resp = toInfo(config)(info)
+  const pairs2 = {
+    key2: 'a2',
+    value2: '2'
+  }
+
+  const fc = (arg1, arg2) => {
+    return { [arg1]: arg2 }
+  }
+
+  const list = [
+    [pairs1, ['key1', 'value1'], ['k1', 'v1']],
+    [pairs2, ['key2', 'value2'], ['k2', 'v2']],
+    [fc, 'arg1', 'arg2']
+  ]
+
+  // 数据合并
+  const toCombine = (list) => {
+    const isFunction = (val) => typeof val === 'function'
+
+    const propC = (source) => (key, target) => {
+      if (Array.isArray(key)) {
+        return key.reduce((acc, curr, index) => {
+          acc[target[index]] = source[curr]
+          return acc
+        }, {})
+      } else {
+        return { target: source[key] }
+      }
+    }
+
+    return list.reduce((acc, curr) => {
+      let t
+      const f = curr[0]
+      if (isFunction(f)) {
+        t = curr.shift(f).apply(f, curr)
+      } else {
+        const [source, key, target] = curr
+        t = propC(source)(key, target)
+      }
+
+      return { ...acc, ...t }
+    }, {})
+  }
+
+  const resp = toCombine(list)
+  console.log(resp)
 
   /** 函数返回 */
   return {
-    params: {
-      config,
-      info
-    },
+    params: {},
     resp
   }
 }
@@ -70,10 +104,7 @@ export default {
     })
     const onClick = () => {
       const log = test()
-      debugger
-      state.params = log.params
-      state.resp = log.resp
-      console.log(props.js);
+      console.log(log.resp)
     }
 
     return { state, onClick }

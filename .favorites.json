@@ -7,5 +7,23 @@
         "workspaceRoot": null,
         "workspacePath": null,
         "id": "BPZpYE4qQbt5Uf0n"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Fr\\2020\\vite\\docs\\dist",
+        "parent_id": null,
+        "fsPath": "d:\\Fr\\2020\\vite\\docs\\dist",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "DVnM8BguiNXlH3t0"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Fr\\2020\\vite\\src\\kit",
+        "parent_id": null,
+        "fsPath": "d:\\Fr\\2020\\vite\\src\\kit",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "aPs8AUGtn5obDcZJ"
     }
 ]
